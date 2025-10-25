@@ -167,10 +167,12 @@ header {
 }
 
 .about-content h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 30px;
   color: #00ffff;
-  margin-bottom: 15px;
-  text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #00ffff;
 }
 
 .about-content p {
@@ -374,10 +376,12 @@ header {
   background-repeat:no-repeat;
 }
 #projects h2{
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 30px;
   color: #00ffff;
-  margin-bottom: 15px;
-  text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #00ffff;
 }
 
 
@@ -406,10 +410,12 @@ header {
 }
 
 #contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  font-size: 2rem;
+  margin-bottom: 30px;
   color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #00ffff;
 }
 
 /* Container holding both sides */
@@ -793,4 +799,13 @@ footer { text-align: center; padding: 20px; background: rgba(0,0,0,0.85); font-s
   #skills h2 {
     font-size: 1.6rem;
   }
+}
+
+#skills-card h2{
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #00ffff;
 }
