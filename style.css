@@ -58,18 +58,39 @@ header {
 }
 @keyframes blink { 0%,100%{border-color:transparent;} 50%{border-color:#00eaff;} }
 
-.btn {
+.btn_pulse {
   display: inline-block; margin-top: 20px; padding: 12px 25px;
   background-color: #00eaff; color: #000; text-decoration: none;
   border-radius: 25px; font-weight: bold; transition: 0.3s;
 }
-.btn:hover { background-color: #fff; color: #000; }
-.pulse { animation: pulse 1.5s infinite; }
+.btn_pulse:hover { background-color: #fff; color: #000; }
+.btn_pulse { animation: pulse 1.5s infinite; }
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(0, 234, 255, 0.7); }
   70% { box-shadow: 0 0 0 15px rgba(0, 234, 255, 0); }
   100% { box-shadow: 0 0 0 0 rgba(0, 234, 255, 0); }
 }
+
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon {
+  font-size: 1.7rem;
+  color: #00ffff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* gap: 10px; */
+} 
+.icon:hover {
+   text-shadow: 0 0 10px rgba(0, 255, 255, 0.7)
+} 
+
 
 .about-section {
   padding: 60px 0;
@@ -133,6 +154,140 @@ header {
   width: 80%;
   border-radius: 12px;
   backdrop-filter: blur(6px);
+}
+
+
+
+/* education section */
+
+#education h2{
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #00ffff;
+}
+.timeline {
+  position: relative;
+  margin: auto;
+  padding: 20px 0;
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(var(--neon-blue), var(--neon-purple));
+  box-shadow: 0 0 20px var(--neon-purple);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 30px;
+}
+
+.timeline-item:nth-child(odd) {
+  align-self: flex-start;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+  text-align: left;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 18px;
+  height: 18px;
+  background: var(--neon-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--neon-blue);
+  z-index: 2;
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -9px;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -9px;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid #00eaff;
+  border-radius: 10px;
+  padding: 18px 25px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  transition: 0.4s ease;
+}
+
+.timeline-content:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 20px #00ffff80, 0 0 25px #00ffff40 inset;
+  transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+  color: var(--neon-blue);
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px var(--neon-blue);
+}
+
+.timeline-content h4 {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    text-align: left !important;
+  }
+
+  .timeline-item::before {
+    left: 0;
+  }
+}
+
+.edu_button {
+  display: inline-block; margin-top: 20px; padding: 12px 25px;
+  background-color: #00eaff; color: #000; text-decoration: none;
+  border-radius: 25px; font-weight: bold; transition: 0.3s;
+}
+.edu_button:hover { background-color: #fff; color: #000; }
+.edu_button { animation: pulse 1.5s infinite; }
+.edu_button a{
+  text-decoration: none;
+  color:#000;
 }
 
 /* Projects Section */
@@ -746,3 +901,4 @@ footer { text-align: center; padding: 20px; background: rgba(0,0,0,0.85); font-s
   letter-spacing: 2px;
   text-shadow: 0 0 12px #00ffff;
 }
+
